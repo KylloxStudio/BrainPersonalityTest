@@ -1,0 +1,1545 @@
+/* Template: Aria - Business HTML Landing Page Template
+   Author: Inovatik
+   Created: Jul 2019
+   Description: Master CSS file
+*/
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+p {
+    color: #787976;
+    font: 400 1rem/1.5625rem "나눔스퀘어 Bold", sans-serif;
+}
+
+.p-small {
+    font: 400 0.875rem/1.375rem "인피니티산스", sans-serif;
+}
+
+.li-space-lg li {
+    margin-bottom: 0.375rem;
+}
+
+@font-face {
+    src: url("../fonts/ImcreSoojin.ttf");
+    font-family: "아임크리수진";
+}
+
+@font-face {
+    font-family: 'TT투게더';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '코트라 Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '인피니티산스';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '인피니티산스 Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-BoldA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '나눔스퀘어 Bold';
+    src: url('../fonts/NanumSquare_acB.ttf');
+}
+
+@font-face {
+    font-family: '나눔스퀘어 ExtraBold';
+    src: url('../fonts/NanumSquare_acEB.ttf');
+}
+
+h1 {
+    color: black;
+    font: 700 2.5rem/3rem "나눔스퀘어 ExtraBold", sans-serif;
+}
+
+h2 {
+    color: black;
+    font: 700 1.75rem/2.125rem "나눔스퀘어 ExtraBold", sans-serif;
+}
+
+h3 {
+    color: black;
+    font: 700 1.375rem/1.75rem "나눔스퀘어 ExtraBold", sans-serif;
+}
+
+h4 {
+    color: black;
+    font: 700 1.25rem/1.625rem "나눔스퀘어 ExtraBold", sans-serif;
+}
+
+h5 {
+    color: black;
+    font: 700 1.125rem/1.5rem "나눔스퀘어 ExtraBold", sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #6EE3F7;
+    text-decoration: underline;
+}
+
+.navbar-top-header {
+    padding-top: 6.5rem;
+    padding-bottom: 0.5rem;
+    background-color: #212023;
+    text-align: center;
+}
+
+.link-btn {
+    color: #787976;
+    text-decoration: underline;
+}
+
+.link-btn:hover {
+    color: #636162;
+    text-decoration: underline;
+}
+
+.round {
+    border-radius: 75%;
+}
+
+.section-title {
+    color: #484a46;
+    font: 500 0.8125rem/1.125rem "인피니티산스 Bold", sans-serif;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+/*************************/
+
+
+/*       Preloader       */
+
+
+/*************************/
+
+.spinner-wrapper {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #313131;
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    /* centers the loading animation vertically one the screen */
+    left: 50%;
+    /* centers the loading animation horizontally one the screen */
+    width: 3.75rem;
+    height: 1.25rem;
+    margin: -0.625rem 0 0 -1.875rem;
+    /* is width and height divided by two */
+    text-align: center;
+}
+
+.spinner>div {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background-color: #fff;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1.0);
+    }
+}
+
+@keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+
+
+/**************************/
+
+
+/*       Navigation       */
+
+
+/**************************/
+
+.navbar-custom {
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    background-color: #212023;
+    box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
+    font: 600 0.875rem/0.875rem "나눔스퀘어 Bold", sans-serif;
+    transition: all 0.2s;
+}
+
+.navbar-custom .navbar-brand {
+    font-size: 0;
+}
+
+.navbar-custom .navbar-brand.logo-text {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    font: 200 2.25rem/1.5rem "나눔스퀘어 ExtraBold", sans-serif;
+    font-size: 180%;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-custom .navbar-nav {
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.navbar-custom .nav-item .nav-link {
+    padding: 0.625rem 0.75rem 0.625rem 0.75rem;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.navbar-custom .nav-item .nav-link:hover,
+.navbar-custom .nav-item .nav-link.active {
+    color: #6EE3F7;
+}
+
+
+/* Dropdown Menu */
+
+.navbar-custom .dropdown:hover>.dropdown-menu {
+    display: block;
+    /* this makes the dropdown menu stay open while hovering it */
+    min-width: auto;
+    animation: fadeDropdown 0.2s;
+    /* required for the fade animation */
+}
+
+@keyframes fadeDropdown {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.navbar-custom .dropdown-toggle:focus {
+    /* removes dropdown outline on focus  */
+    outline: 0;
+}
+
+.navbar-custom .dropdown-menu {
+    margin-top: 0;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #212023;
+}
+
+.navbar-custom .dropdown-item {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-custom .dropdown-item:hover {
+    background-color: #313131;
+}
+
+.navbar-custom .dropdown-item .item-text {
+    font: 600 0.875rem/0.875rem "나눔스퀘어 Bold", sans-serif;
+}
+
+.navbar-custom .dropdown-item:hover .item-text {
+    color: #6EE3F7;
+}
+
+.navbar-custom .dropdown-items-divide-hr {
+    width: 100%;
+    height: 1px;
+    margin: 0.75rem auto 0.75rem auto;
+    border: none;
+    background-color: #b5bcc4;
+    opacity: 0.2;
+}
+
+
+/* end of dropdown menu */
+
+.navbar-custom .social-icons {
+    display: none;
+}
+
+.navbar-custom .navbar-toggler {
+    border: none;
+    color: #fff;
+    font-size: 1.975rem;
+}
+
+.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-times {
+    display: none;
+}
+
+.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-bars {
+    display: inline-block;
+}
+
+.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-bars {
+    display: none;
+}
+
+.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-times {
+    display: inline-block;
+    margin-right: 0.1rem;
+}
+
+
+/*********************/
+
+
+/*       Header      */
+
+
+/*********************/
+
+.header {
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)), url('../images/header-background.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.header .header-content {
+    padding-top: 8rem;
+    padding-bottom: 2.125rem;
+    text-align: center;
+}
+
+.header .text-container {
+    margin-bottom: 3rem;
+}
+
+.header h1 {
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.header .p-large {
+    margin-bottom: 2rem;
+    color: #dfe5ec;
+}
+
+.header .btn-solid-lg {
+    margin-right: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+
+/*********************/
+
+
+/*      Content      */
+
+
+/*********************/
+
+.basic-1 {
+    padding-top: 6.5rem;
+    padding-bottom: 3rem;
+}
+
+.basic-1 .text-container {
+    margin-bottom: 3rem;
+}
+
+.basic-1 .section-title {
+    margin-bottom: 0.95rem;
+}
+
+.basic-1 h2 {
+    margin-bottom: 1.375rem;
+}
+
+.basic-1 .testimonial-author {
+    color: #484a46;
+}
+
+.basic-1 .image-container {
+    overflow: hidden;
+    border-radius: 0.25rem;
+}
+
+.basic-1 .image-container img {
+    margin: 0;
+    border-radius: 0.25rem;
+    transition: all 0.3s;
+}
+
+.basic-1 .image-container:hover img {
+    -moz-transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+
+/***********************/
+/*       Contact       */
+/***********************/
+.form-2 {
+	padding-top: 6.625rem;
+	padding-bottom: 5.625rem;
+	background-color: #fbfbfb;
+}
+
+.form-2 .text-container {
+	margin-bottom: 3rem;
+}
+
+.form-2 .section-title {
+	margin-bottom: 0.95rem;
+ }
+
+.form-2 h2 {
+	margin-bottom: 1.375rem;
+}
+
+
+/*************************/
+
+
+/*       Copyright       */
+
+
+/*************************/
+
+.copyright {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    background-color: #000000;
+    text-align: center;
+}
+
+.copyright p,
+.copyright a {
+    color: #dfe5ec;
+    text-decoration: none;
+}
+
+
+/**********************************/
+
+
+/*       Back To Top Button       */
+
+
+/**********************************/
+
+a.back-to-top {
+    position: fixed;
+    z-index: 999;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    display: none;
+    width: 2.625rem;
+    height: 2.625rem;
+    border-radius: 1.875rem;
+    background: #6EE3F7 url("../images/up-arrow.png") no-repeat center 47%;
+    background-size: 1.125rem 1.125rem;
+    text-indent: -9999px;
+}
+
+a:hover.back-to-top {
+    background-color: #7cd6e4;
+}
+
+
+/* Min-width width 768px */
+
+@media (min-width: 768px) {
+    /* Navigation */
+    .navbar-custom {
+        padding: 2.125rem 1.5rem 2.125rem 2rem;
+        box-shadow: none;
+        background: transparent;
+    }
+    .navbar-custom .navbar-brand.logo-text {
+        color: #fff;
+    }
+    .navbar-custom .navbar-nav {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .navbar-custom .nav-item .nav-link {
+        padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    }
+    .navbar-custom .nav-item .nav-link:hover,
+    .navbar-custom .nav-item .nav-link.active {
+        color: #6EE3F7;
+    }
+    .navbar-custom.top-nav-collapse {
+        padding: 0.375rem 1.5rem 0.375rem 2rem;
+        box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
+        background-color: #313131;
+    }
+    .navbar-custom.top-nav-collapse .navbar-brand.logo-text {
+        color: #fff;
+    }
+    .navbar-custom.top-nav-collapse .nav-item .nav-link {
+        color: #fff;
+    }
+    .navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
+    .navbar-custom.top-nav-collapse .nav-item .nav-link.active {
+        color: #6EE3F7;
+    }
+    .navbar-custom .dropdown-menu {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-top: 0.75rem solid rgba(0, 0, 0, 0);
+        border-radius: 0.25rem;
+        box-shadow: 0 0.25rem 0.375rem 0 rgba(0, 0, 0, 0.03);
+    }
+    .navbar-custom.top-nav-collapse .dropdown-menu {
+        border-top: 0.125rem solid rgba(0, 0, 0, 0);
+    }
+    .navbar-custom .dropdown-item {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+    .navbar-custom .dropdown-items-divide-hr {
+        width: 84%;
+    }
+    /* end of navigation */
+
+    /* Header */
+    .header .header-content {
+        padding-top: 13rem;
+        padding-bottom: 7.5rem;
+    }
+    .header h1 {
+        font: 700 3.5rem/4rem "나눔스퀘어 ExtraBold", sans-serif;
+    }
+    /* end of header */
+}
+/* end of min-width width 768px */
+
+
+/* Min-width width 992px */
+
+@media (min-width: 992px) {
+    /* Navigation */
+    .navbar-custom .social-icons {
+        display: block;
+        margin-left: 0.5rem;
+    }
+    .navbar-custom .fa-stack {
+        margin-left: 0.375rem;
+        font-size: 0.8125rem;
+    }
+    .navbar-custom .fa-stack-1x {
+        font-size: 0.6875rem;
+        line-height: 1.625rem;
+        color: #fff;
+        transition: all 0.2s ease;
+    }
+    .navbar-custom .fa-stack:hover .fa-stack-1x {
+        color: #6EE3F7;
+    }
+    /* end of navigation */
+
+    /* Header */
+    .header .header-content {
+        padding-top: 14rem;
+        padding-bottom: 15rem;
+    }
+    .header .text-container {
+        margin-top: 6.5rem;
+    }
+    /* end of header */
+
+    /* Content */
+    .basic-1 {
+        padding-top: 6.875rem;
+    }
+    .basic-1 .text-container {
+        margin-bottom: 0;
+    }
+    /* end of content */
+}
+/* end of min-width width 992px */
+
+
+/* Min-width width 1200px */
+
+@media (min-width: 1200px) {
+    /* Navigation */
+    .navbar-custom {
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+    .navbar-custom.top-nav-collapse {
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+    /* end of navigation */
+
+    /* Header */
+    .header .header-content {
+        padding-top: 14.75rem;
+        padding-bottom: 17.5rem;
+    }
+    /* end of header */
+
+    /* Content */
+    .basic-1 .text-container {
+        margin-top: 1.875rem;
+        margin-right: 3rem;
+    }
+    /* end of content */
+}
+/* end of min-width width 1200px */
+
+
+/* Min-width width 1600px */
+
+@media (min-width: 1600px) {
+    /* Navigation */
+    .navbar-custom {
+        padding-right: 12rem;
+        padding-left: 12rem;
+    }
+    .navbar-custom.top-nav-collapse {
+        padding-right: 12rem;
+        padding-left: 12rem;
+    }
+    /* end of navigation */
+}
+/* end of min-width width 1200px
+
+End of Template Code
+Author: Inovatik
+(https://inovatik.com) */
+
+
+
+
+/* Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+{Start of Aaron Vanston's Code
+(https://codepen.io/aaronvanston/pen/yNYOXR)} */
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.file-upload {
+    padding: 15% 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1.5px #F6F6F6;
+    background-color: #F6F6F6;
+    transition: all 0.25s;
+}
+
+.file-upload-content {
+    display: none;
+    text-align: center;
+}
+
+.file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+    right: 0%;
+    top: 0%;
+    transition: all 0.25s;
+}
+
+.image-upload-wrap {
+    width: 60%;
+    height: 100%;
+    margin-top: 0 auto;
+    position: relative;
+    top: 0%;
+    left: 20%;
+    object-fit: contain;
+    border-radius: 2.5px;
+    border: 2.5px dashed #636162;
+    background-color: #ffffff;
+    transition: all 0.25s;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #a3a2a2;
+    border: 2.5px dashed #ffffff;
+}
+
+.image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+}
+
+.drag-text {
+    text-align: center;
+}
+
+.drag-text h3 {
+    font-family: "나눔스퀘어 ExtraBold";
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #313131;
+    padding: 60px 0;
+}
+
+.file-upload-image {
+    max-height: 50%;
+    max-width: 50%;
+    margin: 3%;
+    background-color: white;
+    border: 12px solid #212322;
+    padding: 3.5%;
+    box-shadow: -5px -5px 5px 5px gray;
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}
+
+.upload {
+    width: 20%;
+}
+
+.upload-text {
+    width: 75%;
+    font-family: "나눔스퀘어 ExtraBold";
+    font-size: 1.5rem;
+    line-height: 1.53;
+    text-align: center;
+    color: #35465d;
+    margin: 0 auto;
+}
+/* End of Aaron Vanston's Code
+(https://codepen.io/aaronvanston/pen/yNYOXR) */
+
+
+/* Start of Jocoding's Code
+(https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg,
+https://github.com/youtube-jocoding) */
+
+.A-brain-type {
+    color: #e12b21;
+}
+
+.B-brain-type {
+    color: #11c520;
+}
+
+.C-brain-type {
+    color: #e4156b;
+}
+
+.D-brain-type {
+    color: #3d81da;
+}
+
+.E-brain-type {
+    color: #40f340;
+}
+
+.F-brain-type {
+    color: #c32ce9;
+}
+
+.bar-container {
+    height: 2.7rem;
+}
+
+.A-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    background-color: rgba(226, 43, 43, 0.2);
+}
+
+.A-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 12px;
+    background-color: rgb(226, 43, 43);
+}
+
+.B-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    background-color: rgba(17, 197, 32, 0.2);
+}
+
+.B-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 12px;
+    background-color: rgba(17, 197, 32, 1);
+}
+
+.C-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    background-color: rgba(228, 21, 107, 0.2);
+}
+
+.C-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 12px;
+    background-color: rgba(228, 21, 107, 1);
+}
+
+.D-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    background-color: rgba(61, 129, 218, 0.2);
+}
+
+.D-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 12px;
+    background-color: rgba(61, 129, 218, 1);
+}
+
+.E-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    background-color: rgba(64, 243, 64, 0.2);
+}
+
+.E-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 12px;
+    background-color: rgba(64, 243, 64, 1);
+}
+
+.F-box {
+    position: absolute;
+    top: 0;
+    left: 0.3rem;
+    height: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    background-color: rgba(195, 44, 233, 0.2);
+}
+
+.F-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 12px;
+    background-color: rgba(195, 44, 233, 1);
+}
+
+.percent-text {
+    font-size: 1.025rem;
+    color: #ffffff;
+    margin-top: 0.5%;
+    text-align: center;
+}
+
+.brain-type {
+    width: 100%;
+    font-size: 1.25rem;
+    color: #515352;
+    text-align: left;
+    height: 2rem;
+}
+
+#type-container {
+    width: 80%;
+    margin: 0 auto;
+}
+/* End of Jocoding's Code
+(https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg,
+https://github.com/youtube-jocoding) */
+
+
+.retry-btn {
+    background-color: #0e7cd6;
+    border: solid 1.5px #0e7cd6;
+    border-radius: 40px;
+    padding: 1%;
+    margin-top: 1.5%;
+}
+
+.retry-btn:hover {
+    background: #2b8cdb;
+}
+
+.retry-text {
+    display: block;
+    font-family: "아임크리수진";
+    font-size: 1.35rem;
+    text-align: center;
+    color: #ffffff;
+    padding: 4px 16px;
+}
+
+.animal-face-btn {
+    background-color: #313332;
+    border: solid 1.5px #313332;
+    border-radius: 40px;
+    padding: 1%;
+    margin-top: 3.5%;
+}
+
+.animal-face-btn:hover {
+    background: #4d504e;
+}
+
+.animal-face-text {
+    display: block;
+    font-family: "아임크리수진";
+    font-size: 1.185rem;
+    text-align: center;
+    color: #ffffff;
+    padding: 4px 16px;
+}
+
+.jocoding-youtube-link {
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    transition: all 0.25s;
+}
+
+@media (max-width: 600px) {
+    .jocoding-youtube-link {
+        position: absolute;
+        top: 75px;
+        right: 5px;
+        transition: all 0.25s;
+    }
+}
+
+.result-text {
+    font-family: "아임크리수진";
+    font-size: 2.5rem;
+    line-height: 1.53;
+    text-align: center;
+    color: black;
+    margin: 0 auto;
+}
+
+.result-subtext {
+    font-family: "아임크리수진";
+    font-size: 1.05rem;
+    text-align: center;
+    color: #515352;
+    margin-bottom: 5%;
+}
+
+.brain-description {
+    font-family: "아임크리수진";
+    font-size: 1.5rem;
+    line-height: 1.58;
+    text-align: center;
+    color: #414342;
+    margin-top: 2.5%;
+}
+
+.support-text {
+    font-family: "TT투게더";
+    font-size: 1.215rem;
+    line-height: 1.71;
+    color: #f52b2b;
+    text-align: center;
+    /* text-decoration: underline; */
+}
+
+.support-text:hover {
+    color: #fd0808;
+}
+
+.youtube-icon {
+    width: 30px;
+    height: 27.262px;
+    transition: all 0.25s;
+}
+
+@media (max-width: 600px) {
+    .youtube-icon {
+        width: 20px;
+        height: 17.262px;
+        transition: all 0.25s;
+    }
+}
+
+.youtube-viewer {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.youtube-viewer iframe {
+    width: 960px;
+    height: 540px;
+    margin: 0 auto;
+    margin-top: 20%;
+    transition: all 0.25s;
+}
+
+@media (max-width: 1010px) {
+    .youtube-viewer iframe {
+        width: 600px;
+        height: 337.5px;
+        margin: 0 auto;
+        margin-top: 10%;
+        transition: all 0.25s;
+    }
+}
+
+@media (max-width: 710px) {
+    .youtube-viewer iframe {
+        width: 320px;
+        height: 180px;
+        margin: 0 auto;
+        margin-top: 10%;
+        transition: all 0.25s;
+    }
+}
+
+.youtube-viewer-text {
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+    transition: all 0.25s;
+}
+
+.guide-text {
+    width: 85%;
+    font-family: "나눔스퀘어 ExtraBold";
+    font-size: 1.25rem;
+    line-height: 1.53;
+    text-align: center;
+    color: black;
+    margin: 0 auto;
+}
+
+.share-text {
+    width: 50%;
+    font-family: "아임크리수진";
+    font-size: 1.125rem;
+    text-align: center;
+    color: black;
+    margin: 0 auto;
+}
+
+.loading-text {
+    width: 50%;
+    font-family: "나눔스퀘어 Bold";
+    font-size: 0.925rem;
+    text-align: center;
+    color: #515352;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: "아임크리수진";
+    font-size: 2.5rem;
+    line-height: 1.67;
+    color: #3a3b3b;
+    text-align: center;
+}
+
+.subtitle {
+    font-family: "아임크리수진";
+    font-size: 1.75rem;
+    line-height: 1.53;
+    padding-bottom: 3.5%;
+    color: #515352;
+    text-align: center;
+}
+
+.hidden-description-btn-wrap {
+    position: absolute;
+    top: 125px;
+    left: 20px;
+    transition: all 0.25s;
+}
+
+@media (max-width: 600px) {
+    .hidden-description-btn-wrap {
+        position: absolute;
+        top: 75px;
+        left: 5px;
+        transition: all 0.25s;
+    }
+}
+
+.title-description-wrap {
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.title-description {
+    font-family: "아임크리수진";
+    font-size: 1.125rem;
+    line-height: 1.53;
+    margin-bottom: 2%;
+    color: #515352;
+    text-align: center;
+}
+
+.hidden-description-btn {
+    font-family: "코트라 Bold";
+    font-size: 1.125rem;
+    margin-top: 2.5%;
+    color: #515352;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.hidden-description-btn:hover {
+    color: #212322;
+}
+
+.test-title {
+    font-family: "아임크리수진";
+    font-size: 2.25rem;
+    line-height: 1.61;
+    color: #414342;
+    text-align: center;
+}
+
+.ad-container-grid {
+    display: grid;
+    width: 820px;
+    height: 275px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    transition: all 0.25s;
+    padding-bottom: 10%;
+}
+
+@media (max-width: 950px) {
+    .ad-container-grid {
+        width: fit-content;
+        height: 510px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin-top: 2%;
+        transition: all 0.25s;
+    }
+
+    #only-pc-ad {
+        display: none;
+        transition: all 0.25s;
+    }
+}
+
+.kakao-ad-banner-grid {
+    width: 250px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.ad-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.kakao-ad-banner-middle {
+    width: 840px;
+    height: 168px;
+    margin: 0 auto;
+    margin-top: 2.5%;
+    transition: all 0.25s;
+}
+
+@media (max-width: 860px) {
+    .kakao-ad-banner-middle {
+        width: 320px;
+        height: 100px;
+        margin: 0 auto;
+        margin-top: 3.5%;
+        transition: all 0.25s;
+    }
+}
+
+@media (min-width: 951px) {
+    .kakao-ad-banner-bottom {
+        display: none;
+        transition: all 0.25s;
+    }
+}
+
+@media (max-width: 950px) {
+    .kakao-ad-banner-bottom {
+        width: 720px;
+        height: 140px;
+        margin: 0 auto;
+        margin-top: 8.5%;
+        margin-bottom: 2.5%;
+        transition: all 0.25s;
+    }
+}
+
+@media (max-width: 740px) {
+    .kakao-ad-banner-bottom {
+        width: 540px;
+        height: 120px;
+        margin: 0 auto;
+        margin-top: 8.5%;
+        margin-bottom: 2.5%;
+        transition: all 0.25s;
+    }
+}
+
+@media (max-width: 600px) {
+    .kakao-ad-banner-bottom {
+        width: 320px;
+        height: 100px;
+        margin: 0 auto;
+        margin-top: 8.5%;
+        margin-bottom: 2.5%;
+        transition: all 0.25s;
+    }
+}
+
+.update-log-background {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.update-log-title {
+    font-family: "코트라 Bold";
+    font-size: 2.25rem;
+    line-height: 1.61;
+    color: #414342;
+    text-align: left;
+    margin-top: 1.5%;
+}
+
+.update-log-wrap {
+    width: 70%;
+    float: left;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.815);
+    margin-bottom: 2.5%;
+}
+
+.update-log-text {
+    width: 90%;
+    font-family: "나눔스퀘어 ExtraBold";
+    font-size: 1.5rem;
+    line-height: 1.53;
+    text-align: left;
+    color: #ffffff;
+}
+
+.main-page-btn {
+    font-family: "아임크리수진";
+    font-size: 1.75rem;
+    color: #ffffff;
+    text-decoration: none;
+    position: absolute;
+    left: 5%;
+    top: 2.75rem;
+}
+
+.main-page-btn:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.mail-icon {
+    width: 15px;
+    height: 13.5px;
+    margin-bottom: 0.2%;
+    transition: all 0.25s;
+}
+
+@media (max-width: 600px) {
+    .mail-icon {
+        width: 11.682px;
+        height: 10.5px;
+        margin-bottom: 0.15%;
+        transition: all 0.25s;
+    }
+}
+
+.send-mail-btn {
+    color: #515352;
+    margin-left: 0.85%;
+    text-decoration: underline;
+}
+
+.send-mail-btn:hover {
+    color: #313332;
+    margin-left: 0.85%;
+    text-decoration: underline;
+}
+
+.comments-wrap {
+    width: 99.25%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.guide-description-btn-wrap {
+    margin: 0 auto;
+    margin-top: 2.5%;
+    transition: all 0.25s;
+}
+
+@media (max-width: 600px) {
+    .guide-description-btn-wrap {
+        margin: 0 auto;
+        margin-top: 2.5%;
+        transition: all 0.25s;
+    }
+}
+
+.guide-description-wrap {
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.guide-description {
+    font-family: "나눔스퀘어 ExtraBold";
+    font-size: 1.25rem;
+    line-height: 1.53;
+    margin-top: 2.5%;
+    color: black;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.guide-description-btn {
+    font-family: "코트라 Bold";
+    font-size: 1.125rem;
+    color: #515352;
+    text-align: center;
+    text-decoration: underline;
+    transition: all 0.25s;
+}
+
+.guide-description-btn:hover {
+    color: #313332;
+}
+
+.dialog {
+    display: none;
+    position: fixed;
+    z-index: 1125;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+  
+.dialog-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    margin: 0 auto;
+    border: 1.5px solid #515352;
+    border-radius: 0.5rem;
+    width: 65%;
+    max-height: 100vh;
+}
+
+.dialog-header {
+    padding: 1rem 1rem;
+    border-bottom: 1.75px solid #717372;
+}
+
+.dialog-title {
+    width: 80%;
+    font-family: "아임크리수진";
+    font-size: 1.525rem;
+    margin-bottom: 0;
+    line-height: 1.51;
+    color: #212322;
+}
+
+.dialog-app {
+    font-family: "인피니티산스 Bold";
+    margin: 0 auto;
+    border-bottom: 1.75px solid #717372;
+}
+
+.dialog-download {
+    font-family: "인피니티산스 Bold";
+    margin: 0 auto;
+}
+
+.dialog-text {
+    width: 85%;
+    font-family: "인피니티산스 Bold";
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 1.51;
+    color: #515352;
+}
+  
+.dialog-close {
+    color: #aaaaaa;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 2.125rem;
+    font-weight: bold;
+}
+  
+.dialog-close:hover,
+.dialog-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.app-main-image {
+    width: 7.25rem;
+    height: 7.25rem;
+    margin-top: 3.25%;
+    margin-bottom: 2.75%;
+    border: 2.25px solid #000000;
+    border-radius: 0.75rem;
+}
+
+.download-app-image {
+    width: 4.75rem;
+    height: 4.75rem;
+    margin-top: 2.75%;
+    margin-bottom: 1.35%;
+}
+
+.hidden-scroll {
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    touch-action: none;
+}
+
+.title-background {
+    padding-top: 5.75rem;
+    padding-bottom: 0.2rem;
+}
