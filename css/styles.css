@@ -151,7 +151,8 @@ a:hover {
     right: 0;
     bottom: 0;
     left: 0;
-    background: #313131;
+    background: #fafafa;
+    border: 2.25px solid #313131;
 }
 
 .spinner {
@@ -172,7 +173,7 @@ a:hover {
     width: 1rem;
     height: 1rem;
     border-radius: 100%;
-    background-color: #fff;
+    background-color: #212121;
     -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
     animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
